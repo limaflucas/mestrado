@@ -1,1 +1,16 @@
 banco.xlsx
+*.aux
+*.bbl
+*.blg
+*.brf 
+*.idx
+*.ilg
+*.ind
+*.loa
+*.lof
+*.log
+*.loq
+*.lot
+*.*~
+*.toc
+auto/
