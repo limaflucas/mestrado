@@ -77,7 +77,8 @@
 % ---
 % Pacotes adicionais, usados apenas no âmbito do Modelo Canônico do abnteX2
 % ---
-\usepackage{lipsum}				% para geração de dummy text
+\usepackage{lipsum}		         % para geração de dummy text
+\usepackage{siunitx}                     %para formatacao numerica
 % ---
 
 % ---
@@ -701,16 +702,155 @@ Keywords: Keyword1. Keyword2. Keyword3. etc.
 %
 %-------------------------------------------------------------------------
 \chapter{Introdução}
+
+Desde o desenvolvimento do primeiro automóvel
+
+% Tema
+
+Os automóveis representam um importante papel na sociedade atual
+sendo aproveitados não somente para locomoção, mas também como meio
+de serviço. O Departamento Nacional de Trânsito (DENATRAN), órgão
+governamental responsável pelo levantamento da frota de veículos do
+território nacional, estima em sua última pesquisa, realizada em abril
+de 2018, que o Brasil possui \num{98201128} veículos \cite{DENATRANfrotaabr2018}.
+
+O comportamento de um motorista pode ser
+modelado considerando as capacidades do condutor e a
+execução da tarefa de direção. A capacidade do condutor caracteriza a parcela biológica do
+modelo, sendo responsável pela sua velocidade de processamento, tempo de
+reação e seus limites físicos \cite{Fuller2005461}. Este aspecto biológico leva em
+consideração a unicidade de cada indivíduo e o seu modo ímpar de
+interação com os
+instrumentos de condução do veículo. Estas duas características
+singulares permitem a formação e a extração de dados biométricos que podem
+utilizados para identificar ou validar um condutor de modo não
+intrusivo.
+
+% Motivacao
+Em uma sociedade onde os veículos estão presentes nos mais variados
+ramos da atividade econômica, é preciso saber de antemão quem é o
+motorista por trás do volante. Contudo, somente essa informação
+preliminar isolada não é o
+suficiente para prevenir fraudes de identidade. Uma validação não
+intrusiva, durante a execução da atividade de direção, é necessária
+para aumentar a confiabilidade da informação.
+
+Fazendo uso dos dados sensoriados do veículo que está sob comando do
+condutor, o reconhecimento biométrico permite estabelecer a identidade
+de uma pessoa pela análise de suas características comportamentais
+
+% Hipotese
+Espera-se que com o uso de técnicas de aprendizagem profunda
+(\textit{deep learning}), que são capazes de trabalhar em conjunto com séries temporais de alta
+dimensionalidade e em tempo real, seja possível obter
+resultados mais apurados ao realizar a extração de características e
+a identificação biométrica do motorista através do seu comportamento de
+direção. Tais técnicas devem apresentar melhores índices de sucesso no
+uso dos métodos \textit{f-score} e curvas \textit{ROC}, quando
+comparados aos resultados obtidos aplicando-se técnicas de aprendizado superficial (\textit{shallow learning}).
+
+Além da expectativa acima, almeja-se que o custo computacional para a
+execução de tais atividades e sua operacionalização não inviabilize a
+sua utilização pelo mercado.
 \section{Objetivos}
+Apresentar um modelo, que contemple o uso de dados sensoriados do
+veículo extraídos em tempo real, com o intuito de realizar a análise
+comportamental do motorista durante a execução da tarefa de
+direção. Além da tarefa descrita anteriormente, o modelo deve ser apto
+à identificar o motorista com base no seu perfil de condução, gerado na
+tarefa anterior, empregando técnicas de \textit{deep learning}.
+
+\section{Resultados esperados}
 \section{Método de pesquisa}
+% Metodologia
+A metodologia de pesquisa que caracteriza este estudo é a
+quantitativa, pois os resultados obtidos por meio do modelo biométrico para
+identificação do condutor serão comparados
+com outros estudos disponíveis na comunidade. Além disso, esta
+pesquisa também possui caráter experimental porque há o
+desenvolvimento do modelo responsável pela identificação biométrica.
+
+Primeiramente é preciso entender qual é o estado da arte e quais
+trabalhos são relevantes quando abordamos o tema de identificação
+biométrica e identificação de condutores utilizando dados sensoriados
+do veículo, por isso as atividades de estudos bibliográficos
+exploratórios e a revisão sistemática da literatura serão executadas
+nos primeiros 4 meses. Sabendo de antemão como o problema está sendo abordado, é preciso
+selecionar, tratar e documentar a/as bases de dados que serão utilizadas tanto para a
+validação do modelo proposto quanto para a reprodução desta pesquisa pela
+comunidade científica. Esta necessidade impõe uma restrição sobre os
+dados, pois eles precisam estar disponíveis publicamente aos interessados.
+
+A quinta atividade do cronograma consiste em desenvolver o modelo
+responsável por identificar o condutor de acordo com os
+dados sensoriados do veículo. Este modelo será desenvolvido
+aplicando-se técnicas de aprendizagem profunda devido a sua capacidade
+de extrair características de séries temporais multidimensionais. A
+sexta atividade definirá o protocolo de qualidade para avaliação dos
+resultados provenientes da aplicação do modelo descrito
+anteriormente.
+
+
+O segundo semestre desta proposta de pesquisa será dedicado à execução
+dos experimentos utilizando as bases de dados selecionadas com a
+apresentação de diferentes combinações do conjunto de dados, que foram
+organizados na quarta atividade; a previsão de duração para este item
+são de três meses. No último trimestre do ano serão executadas as
+avaliações dos experimentos que definirá a comprovação ou refutação
+desta proposta de projeto de pesquisa.
+
+% Avaliacao
+A avaliação dos experimentos será realizada considerando
+duas etapas. A primeira diz respeito a geração das bioassinaturas de
+condução, que é a representação matemática do perfil de condução
+motorista, e a segunda se dedica a identificação do condutor por meio da sua
+assinatura biométrica.
+
+Na etapa de confecção da bioassinatura serão considerados o tempo de
+execução e o custo computacional para se obter o modelo
+matemático. Para a identificação do motorista serão utilizados o
+\textit{f-score}, curvas \textit{ROC}, o tempo médio para se identificar o motorista e seu
+custo computacional.
+
+O melhor modelo será aquele que apresentar o maior resultado
+considerando a execução das duas atividades como um todo, para isso
+será aplicada uma razão ponderada composta por cada requisito das
+duas etapas.
+
 \section{Organização do documento}
 
 
 \chapter{Referencial teórico}
+Esta seção tem como objetivo introduzir o leitor aos
+temas, conceitos e ao estado da arte acerca das áreas do conhecimento que
+norteiam esta dissertação. Ao término desta seção é esperado que o
+leitor esteja familiarizado com os conceitos que serão empregados nas
+futuras sessões, também é importante a compreensão do papel dos sensores
+automobilísticos, que estão presentes nos veículos atuais, e como os dados por
+eles fornecidos podem ser utilizados em conjunto com as teorias e
+métodos aplicados nas áreas biométricas e de aprendizagem profunda
+(\textit{deep learning}), com o intuito de realizar a análise
+comportamental de um motorista e, por meio dela,
+identificá-lo dentro de uma população de motoristas conhecida.
+
 \section{Sensores automobilísticos}
+Os sensores automobilísticos são responsáveis por controlar com
+precisão cada instrumento pertinente ao automóvel e que esteja sob
+influência da ação humana. O acelerador, o freio e o volante são
+mecanismos utilizados pelo motorista para dar vida ao veículo de
+acordo com seus desejos e a partir destes mecanismos os sensores medem
+a taxa de aceleração do veículo, qual o índice de frenagem que é
+aplicado de acordo com a força aplicada no pedal, qual o ângulo de
+esterção do volante e a movimentação longitudinal do veículo. Os
+exemplos citados anteriormente representam apenas uma ínfima porção
+das características veiculares que podem ser monitoradas.
+
+
 \section{Biometria}
+\section{Deep Learning}
 \section{Análise comportamental}
-\subsection{Comportamento de condução}
+\subsection{Análise comportamental da condução}
+
 
 
 % ----------------------------------------------------------
